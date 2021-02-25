@@ -1,0 +1,26 @@
+eventos que disparam change detection: Eventos do DOM (click,blur,focus...),chamadas HTTP, setTimeout e setInterval.
+ChangeDetectorRef:
+abstract class ChangeDetectorRef {
+  abstract markForCheck(): void
+  abstract detach(): void
+  abstract detectChanges(): void
+  abstract checkNoChanges(): void
+  abstract reattach(): void
+}
+
+Presenter: 
+-Se preocupa em como as coisas são mostradas
+-Recebe informação do componente pai via Input
+-Emite eventos para o componente pai via Output
+-Não guardam estado
+-Podem ter presenters e containers dentro deles
+-Podem ser mais performáticos com OnPush
+
+Container:
+- Se preocupa em como as coisas funcionam
+- Consomem e geram informações de serviços
+- Disparam açẽs com base nos eventos do componente filho
+- Tem noção de estado
+- Podem ter presenters e containers dentro deles
+
+
